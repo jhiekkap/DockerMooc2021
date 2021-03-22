@@ -1,0 +1,6 @@
+bash-3.2$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                      PORTS     NAMES
+122b07805c0d   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 11 seconds ago             nice_varahamihira
+a828ddcf4496   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 2 seconds ago              friendly_yonath
+cbbce6e13162   nginx     "/docker-entrypoint.…"   3 minutes ago        Up 3 minutes                80/tcp    awesome_faraday
+bash-3.2$ 
