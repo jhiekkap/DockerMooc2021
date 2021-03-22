@@ -1,0 +1,26 @@
+KONE-MacBook-Pro:~ kone$ docker run -d -it ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+...
+KONE-MacBook-Pro:~ kone$ docker ps
+CONTAINER ID   IMAGE     COMMAND                   CREATED          STATUS          PORTS     NAMES
+b341dc9caa52   ubuntu    "sh -c 'echo \"Input …"   26 seconds ago   Up 24 seconds             kind_bose
+KONE-MacBook-Pro:~ kone$ docker exec -it b341dc9caa52 bash
+root@b341dc9caa52:/# apt update
+...
+root@b341dc9caa52:/# apt install curl
+...
+root@b341dc9caa52:/# exit  
+exit
+KONE-MacBook-Pro:~ kone$ docker attach b341dc9caa52
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
+
