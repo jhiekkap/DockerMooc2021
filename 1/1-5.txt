@@ -1,0 +1,26 @@
+KONE-MacBook-Pro:~ kone$ docker pull devopsdockeruh/simple-web-service:ubuntu
+...
+KONE-MacBook-Pro:~ kone$ docker pull devopsdockeruh/simple-web-service:alpine
+...
+KONE-MacBook-Pro:~ kone$ docker images
+REPOSITORY                                   TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service            ubuntu    4e3362e907d5   8 days ago    83MB
+devopsdockeruh/simple-web-service            alpine    fd312adc88e0   8 days ago    15.7MB
+KONE-MacBook-Pro:~ kone$ docker run -d -it devopsdockeruh/simple-web-service:alpine
+5a1075f4480d336680a903207d73faa710f5adc851e83b247046b741dff57f30
+KONE-MacBook-Pro:~ kone$ docker ps -a
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                      PORTS     NAMES
+5a1075f4480d   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    9 seconds ago    Up 8 seconds                          pensive_galois
+KONE-MacBook-Pro:~ kone$ docker exec -it 5a1075f4480d sh
+/usr/src/app # tail -f ./text.log
+2021-03-22 17:11:12 +0000 UTC
+2021-03-22 17:11:14 +0000 UTC
+2021-03-22 17:11:16 +0000 UTC
+2021-03-22 17:11:18 +0000 UTC
+2021-03-22 17:11:20 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-03-22 17:11:22 +0000 UTC
+2021-03-22 17:11:24 +0000 UTC
+2021-03-22 17:11:26 +0000 UTC
+2021-03-22 17:11:28 +0000 UTC
+...
