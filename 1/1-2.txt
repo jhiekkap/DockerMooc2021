@@ -1,0 +1,7 @@
+bash-3.2$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+bash-3.2$ 
+
+bash-3.2$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+bash-3.2$ 
