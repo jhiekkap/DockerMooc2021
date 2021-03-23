@@ -1,0 +1,19 @@
+KONE-MacBook-Pro:app kone$ docker build . -t curler
+KONE-MacBook-Pro:app kone$ docker run -d -it curler
+KONE-MacBook-Pro:app kone$ docker ps -a
+KONE-MacBook-Pro:app kone$ docker exec -it b7a3bc3ec764 bash
+root@b7a3bc3ec764:/usr/src/app# apt update
+root@b7a3bc3ec764:/usr/src/app# apt install curl
+exit
+KONE-MacBook-Pro:app kone$ docker ps -a
+docker attach b7a3bc3ec764
+KONE-MacBook-Pro:app kone$ docker attach b7a3bc3ec764
+helsnki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
