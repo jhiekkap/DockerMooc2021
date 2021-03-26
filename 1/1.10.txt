@@ -1,1 +1,3 @@
-docker run -p 80:808080 web-server
+docker run -p 8080:8080 web-server
+
+http://localhost:8080
