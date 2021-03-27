@@ -1,0 +1,5 @@
+docker tag devopsdockeruh/heroku-example registry.heroku.com/docker-heroku-exercise2/web
+docker push registry.heroku.com/docker-heroku-exercise2/web
+heroku container:release web -a docker-heroku-exercise2
+
+https://docker-heroku-exercise2.herokuapp.com/pressesß
