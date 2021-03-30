@@ -1,23 +1,27 @@
 version: '3.5' 
 
 services: 
-    frontend:  
+    frontend-redis:  
       image: frontend
       ports: 
         - 5000:5000
       build: .  
       container_name: frontend
-    backend:  
+    backend-redis:  
       image: backend
       environment: 
-        - REDIS_HOST=127.0.0.1:6379
+        - REDIS_HOST=localhost
       ports: 
         - 8080:8080
-        - 6379:6379
+        # - 6379:6379
       build: .  
       container_name: backend
     redis:
-      image: redis 
+      image: redis  
       build: .  
-      command: ["redis-server", "--appendonly", "yes"]    
+      command: --restart unless-stopped
+      command: redis-server --appendonly yes
+      ports:  
+        - 6379:6379
+      # command: ["redis-server", "--appendonly", "yes"]    
       container_name: redis
