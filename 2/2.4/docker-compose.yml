@@ -19,9 +19,9 @@ services:
     redis:
       image: redis  
       build: .  
-      command: --restart unless-stopped
-      command: redis-server --appendonly yes
+      # command: --restart unless-stopped
+      # command: redis-server --appendonly yes
       ports:  
         - 6379:6379
-      # command: ["redis-server", "--appendonly", "yes"]    
+      command: ["redis-server", "--appendonly", "yes"]    
       container_name: redis
