@@ -18,23 +18,16 @@ services:
   backend:
     image: backend
     environment:
-      REDIS_HOST: http://localhost
-      POSTGRES_HOST: http://localhost
-      POSTGRES_PASSWORD: example
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=db
+      - POSTGRES_PASSWORD=example
     ports:
-      - 8080:8080
-      # - 6379:6379
-      # - 5432:5432
+      - 8080:8080 
     build: .
     container_name: backend
   redis:
-    image: redis
-    # ports:
-    #   - 6379:6379
-    # build: .
-    restart: unless-stopped 
-    # command: redis-server --appendonly yes
-    # command: ["redis-server", "--appendonly", "yes"]
+    image: redis 
+    restart: unless-stopped  
     container_name: redis
   
 volumes:
