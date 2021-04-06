@@ -1,0 +1,27 @@
+version: "3.5"
+
+services:
+     #Flask backend running in port `5000`. Requires a model created by `ml-kurkkumopo-training` at `./model`
+  backend:
+    image: kurkkumopo-backend 
+    volumes:
+        - model:/src/model
+
+
+    #Runs in port `3000` and connects to backend running at port `5000`
+  frontend:
+    image: kurkkumopo-frontend
+
+    # Downloads images to `./imgs` folder and creates CSVs to for generated image URI:s to `./data` folder. 
+    # Creates a model to `./model` folder after which it will exit with code 0 (success).
+  training:
+    image: kurkkumopo-training
+
+volumes: 
+    model:
+    
+ 
+
+
+   
+

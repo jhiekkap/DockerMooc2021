@@ -1,2 +1,0 @@
- touch text.log
- docker-compose run simple-web-service
