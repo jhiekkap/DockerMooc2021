@@ -1,0 +1,4 @@
+
+Buildasin example-backendin uudestaan niin, että REACT_APP_BACKEND_URL=http://localhost:80/api 
+
+docker build . -t frontend_v2
