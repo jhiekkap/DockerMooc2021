@@ -17,6 +17,8 @@ services:
       - REDMINE_DB_PASSWORD=example
     ports:
       - 9999:3000
+    volumes:
+      - files:/usr/src/redmine/files
     depends_on:
       - db
   adminer:

@@ -1,0 +1,46 @@
+version: "3.5"
+
+services:
+  db:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+    container_name: db_redmine
+    volumes:
+      - database:/var/lib/postgresql/data
+  frontend:
+    image: frontend
+    ports:
+      - 5000:5000
+    build: .
+    container_name: frontend
+  backend:
+    image: backend
+    environment:
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=db
+      - POSTGRES_PASSWORD=example
+    ports:
+      - 8080:8080
+    build: .
+    container_name: backend
+  redis:
+    image: redis 
+    restart: unless-stopped  
+    container_name: redis
+  nqinx:
+    image: nginx
+    volumes:  
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    depends_on:
+      - db
+      - frontend
+      - backend 
+      - redis
+    container_name: nginx
+  
+volumes:
+  database:
