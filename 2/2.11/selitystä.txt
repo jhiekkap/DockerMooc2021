@@ -1,0 +1,4 @@
+- käytin socket.io - projektiani:
+    - https://github.com/jhiekkap/socket-io-server
+    - https://github.com/jhiekkap/socket-io-client
+- niissä käyttämäni dockerfileet löytyvät client - ja server - kansioista

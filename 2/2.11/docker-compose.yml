@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+  nodejs-server:
+    build:
+      context: ./socket-io-server
+    ports:
+      - "4001:4001"
+    container_name: socket-io-server
+    volumes:
+       - ./socket-io-server:/usr/src/app/server
+       - /usr/src/app/server/node_modules
+  react-ui:
+    build:
+      context: ./socket-io-client
+    ports:
+      - "3000:3000"
+    container_name: socket-io-client
+    stdin_open: true
+    volumes:
+       - ./socket-io-client:/usr/src/app/client
+       - /usr/src/app/client/node_modules
