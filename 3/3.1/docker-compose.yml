@@ -1,0 +1,14 @@
+version: "3"
+services:
+  grandinkulma:
+    image: jhiekkap/grandinkulma
+    ports:
+      - 5000:5000
+    container_name: grandinkulma
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower

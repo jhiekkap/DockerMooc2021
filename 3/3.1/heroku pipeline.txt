@@ -1,0 +1,6 @@
+- harjoituksesta 1.15 tuttu https://github.com/jhiekkap/-GrandinkulmaNextBusesTS
+- lisäsin siihen serverin, jotta pyörii Herokussa
+- npm start tekee buildin ja käynnistää serverin
+
+https://cryptic-retreat-14253.herokuapp.com/
+
