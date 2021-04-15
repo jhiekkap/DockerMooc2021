@@ -34,7 +34,7 @@ const command = (repo) => {
         'CMD ["serve", "-s", "-l", "5000", "build"]',
     ];
     const createDockerfile = `printf '${dockerFileRows.join('\n')}' > Dockerfile`;
-    const dockerBuild = `cd ${folder} && docker build . -t mirror`;
+    const dockerBuild = `cd ${folder} && docker build . -t jhiekkap/mirror`;
     const dockerRun = 'docker run -p 5000:5000 mirror';
     const dockerPush = 'docker push jhiekkap/mirror';
     return `${cloneGit} && ${createDockerfile} && mv Dockerfile ${folder} && ${dockerBuild} && ${dockerRun} && ${dockerPush}`;
