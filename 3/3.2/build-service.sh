@@ -1,11 +1,11 @@
 #!/bin/sh
-echo "Input repo:"; 
+echo "Gihub repo:"; 
 read REPO; 
 IFS='/' 
 read -r -a array <<< "$REPO"
 REPONAME=${array[4]}
 rm -rf $REPONAME
-IFS=""
+IFS=" "
 git clone $REPO;
  
 DOCKER_FILE='FROM node:latest
@@ -18,8 +18,7 @@ DOCKER_FILE='FROM node:latest
 \nCMD ["serve", "-s", "-l", "5000", "build"]'
 
 echo $DOCKER_FILE  > Dockerfile;  
-HUBNAME="jhiekkap/${REPONAME}"
-echo $HUBNAME  > logs;
+HUBNAME="jhiekkap/${REPONAME}" 
 mv Dockerfile $REPONAME
 cd $REPONAME
 docker build . -t $HUBNAME
