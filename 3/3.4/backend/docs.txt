@@ -1,0 +1,5 @@
+- lähtötilanne
+    - 146MB 
+- RUN ketjutus, apk cache pois, + sertifikaatit 
+    - 4.65kB 
+    -24.2MB?

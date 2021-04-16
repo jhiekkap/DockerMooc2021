@@ -1,7 +1,7 @@
 FROM golang:latest
 WORKDIR /mydir
 EXPOSE 8080
-COPY . . 
+COPY . .  
 RUN go build
 RUN go test ./... 
 ENV PORT=8080
