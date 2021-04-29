@@ -4,7 +4,8 @@ EXPOSE 5000
 RUN node -v && npm -v
 COPY . .
 RUN npm install
-RUN REACT_APP_BACKEND_URL=http://localhost:8080 npm run build
+RUN REACT_APP_BACKEND_URL=http://localhost:8080 
+RUN npm run build
 RUN npm install -g serve
 
 RUN chmod a+x /mydir
