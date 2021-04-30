@@ -1,4 +1,4 @@
-- lähtötilanne 
+- initial size 
     - 1.01GB
-- RUN ketjutus 
+- RUN chaining
     - 1.01GB

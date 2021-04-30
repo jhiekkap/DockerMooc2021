@@ -1,4 +1,4 @@
-- lähtötilanne 
+- initial size
     - 1.01GB
 - FROM golang:1.16.3-alpine3.13
     - 447MB

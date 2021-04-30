@@ -1,6 +1,5 @@
-- harjoituksesta 1.15 tuttu https://github.com/jhiekkap/-GrandinkulmaNextBusesTS
-- lisäsin siihen serverin, jotta pyörii Herokussa
-- npm start tekee buildin ja käynnistää serverin
+- HSL schedule project used in exercise 1.15 https://github.com/jhiekkap/-GrandinkulmaNextBusesTS
+- added a Node server to run in Herokussa
+- npm start builds and then runs the server
 
 https://cryptic-retreat-14253.herokuapp.com/
-

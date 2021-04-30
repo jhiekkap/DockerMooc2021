@@ -1,4 +1,4 @@
-- lähtötilanne 
+- initial size
     -   1.14GB
 -  FROM node:16-alpine3.11
     -  342MB

@@ -1,0 +1,7 @@
+
+- HSL schedule project used in exercises 1.15 and 3.1 https://github.com/jhiekkap/-GrandinkulmaNextBusesTS
+
+- initial size
+    - 1.24GB
+- after chaining commands and using multi-stage builds 
+    -  24.8MB
