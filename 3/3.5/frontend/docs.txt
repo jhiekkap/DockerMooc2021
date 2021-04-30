@@ -1,4 +1,4 @@
 - lähtötilanne 
     -   1.14GB
-- RUN ketjutus 
-    -   1.14GB
+-  FROM node:16-alpine3.11
+    -  342MB
