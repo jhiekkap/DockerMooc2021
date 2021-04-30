@@ -3,8 +3,9 @@ WORKDIR /mydir
 EXPOSE 5000
 RUN node -v && npm -v
 COPY . .
-RUN npm install && REACT_APP_BACKEND_URL=http://localhost:8080 && \
-    npm run build && npm install -g serve && \
+RUN npm install && \ 
+    REACT_APP_BACKEND_URL=http://localhost:8080 npm run build && \
+    npm install -g serve && \
     chmod a+x /mydir && adduser -D appuser 
 USER appuser
 
